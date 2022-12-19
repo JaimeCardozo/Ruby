@@ -11,6 +11,6 @@ puts msg.upcase
 puts msg.downcase
 #swapcase methods invert capitalize with lower case
 puts msg.swapcase
-
+#changes
 
 
