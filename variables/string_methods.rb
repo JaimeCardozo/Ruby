@@ -12,5 +12,6 @@ puts msg.downcase
 #swapcase methods invert capitalize with lower case
 puts msg.swapcase
 #changes
-
+#invert capitalize and lower case string
+puts msg.gsub
 
