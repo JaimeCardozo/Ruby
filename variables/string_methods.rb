@@ -1,7 +1,10 @@
 #pruebas para string 
 #msg  = "kike is best than"
 #puts "#{msg} Link" (interpolación)
-msg = "casa de Dios"
+print("write me ")
+#get methods is for take input for user
+#chomp methods it used for erased the new line created for methods get
+msg = gets.chomp 
 #puts methods is for output in terminal the container of variables
 #size methos give the size of string 
 puts msg.size
@@ -11,7 +14,18 @@ puts msg.upcase
 puts msg.downcase
 #swapcase methods invert capitalize with lower case
 puts msg.swapcase
-#changes
-#invert capitalize and lower case string
-puts msg.gsub
-
+#changes firt string with second string 
+puts msg.gsub("hola", "bye")
+#strip methods erased begin empty string to end empty string
+puts msg.strip.size 
+#include? methods aswer if some string there are here, return a bolean
+puts msg.include? "hola"
+#empty? methods aswer if the string is empty
+puts msg.empty?
+#concatenate is posible with + or *
+msg2 = msg + "de"
+print("1")
+puts (msg2)
+msg3 = msg*3
+print("2")
+puts (msg3)
