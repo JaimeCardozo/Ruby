@@ -23,9 +23,10 @@ puts msg.include? "hola"
 #empty? methods aswer if the string is empty
 puts msg.empty?
 #concatenate is posible with + or *
-msg2 = msg + "de"
-print("1")
+msg2 = msg + " " + msg
 puts (msg2)
 msg3 = msg*3
-print("2")
 puts (msg3)
+#"!" is used for change the value of variable with methods 
+msg3.gsub!("hola", "bye")
+puts msg3
