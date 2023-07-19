@@ -20,8 +20,25 @@ while i < 5
     i+=1
 break
 end """
-list = Array["amarillo","rojo"]
+#test random color
+"""list = Array[amarillo,rojo]
 puts list[0]
 puts list[1]
-print list[rand(2)]
+print list[rand(2)]"
+""
+#test conditional ||
+"""number = 0.5
+if number == 0 || number == 1
+   print yes it good
+else
+   print Ohhh not, holy shit!
+end """
+#test method chomp
+print "write your word: " 
+word = gets
+word2 = word.chomp
+word = word + " to next "
+word2 = word2 + " to next "
+puts word
+puts word2
 
