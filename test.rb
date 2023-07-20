@@ -34,11 +34,19 @@ else
    print Ohhh not, holy shit!
 end """
 #test method chomp
-print "write your word: " 
+"""print write your word:  
 word = gets
 word2 = word.chomp
-word = word + " to next "
-word2 = word2 + " to next "
+word = word +  to next 
+word2 = word2 +  to next 
 puts word
-puts word2
-
+puts word2  """
+#test about array methods
+"""Example_Array = [Yellow, red, green]
+puts Example_Array.fetch(3,This position not exist)  
+Example_Array << pink
+print Example_Array """
+#test string
+house = "kike's house"
+word = "the house: #{house}"
+print word
