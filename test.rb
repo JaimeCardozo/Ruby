@@ -55,6 +55,11 @@ print word"""
 bag = bag.unshift(Casa)
 print bag"""
 #test for i+=1
-i = 2
+"""i = 2
 i += 2
-print i
+print i """
+#test for Range and cycle
+while input = gets.chomp 
+    puts input + " triggered" if input =~ /start/ .. input =~ /end/ 
+   
+end
