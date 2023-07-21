@@ -47,6 +47,14 @@ puts Example_Array.fetch(3,This position not exist)
 Example_Array << pink
 print Example_Array """
 #test string
-house = "kike's house"
-word = "the house: #{house}"
-print word
+"""house = kike's house
+word = the house: {house}
+print word"""
+#test methods unshift
+"""bag = []
+bag = bag.unshift(Casa)
+print bag"""
+#test for i+=1
+i = 2
+i += 2
+print i
