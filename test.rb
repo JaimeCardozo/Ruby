@@ -58,8 +58,17 @@ print bag"""
 """i = 2
 i += 2
 print i """
-#test for Range and cycle
+"""#test for Range and cycle
 while input = gets.chomp 
-    puts input + " triggered" if input =~ /start/ .. input =~ /end/ 
+    puts input +  triggered if input =~ /start/ .. input =~ /end/ 
    
-end
+end """
+#test methods length Array
+"""Array = [house, cart, keys, ball]
+puts Array.length()
+print Array[2]"""
+#test method delet Array
+Array = ["house", "cart", "key"]
+save = Array.delete("cart")
+puts save
+print Array
