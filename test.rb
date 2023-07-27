@@ -68,7 +68,21 @@ end """
 puts Array.length()
 print Array[2]"""
 #test method delet Array
-Array = ["house", "cart", "key"]
-save = Array.delete("cart")
+"""Array = [house, cart, key]
+save = Array.delete(cart)
+save = Array.delete(ke)
 puts save
-print Array
+print Array """
+#test method delet string
+"""word = My house is beautiful
+save = word.delete(My)
+puts save 
+puts word"""
+#test method slice 
+Games = ["Pokemon Stadium", "Pokemon Rojo Fuego", "Bomberman 64"]
+firts_Game = Games.slice(1)
+puts firts_Game
+zero_Game = Games.slice(0)
+puts zero_Game
+games = Games.slice(0, 2)                      
+print games
