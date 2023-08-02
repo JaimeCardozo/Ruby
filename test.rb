@@ -79,10 +79,31 @@ save = word.delete(My)
 puts save 
 puts word"""
 #test method slice 
-Games = ["Pokemon Stadium", "Pokemon Rojo Fuego", "Bomberman 64"]
+"""Games = [Pokemon Stadium, Pokemon Rojo Fuego, Bomberman 64]
 firts_Game = Games.slice(1)
 puts firts_Game
 zero_Game = Games.slice(0)
 puts zero_Game
 games = Games.slice(0, 2)                      
-print games
+print games"""
+"""symbol = :Symbols
+print symbol
+symbol = troll
+puts symbol
+symbol = 2
+puts symbol """
+#this test is: Hash - Symbols
+casa = "user"
+casa2 = casa.to_sym
+hash = {casa => "casa"}
+hash2 = {casa2 => "casa2"}
+puts hash[casa] 
+puts hash
+puts hash2
+puts hash2[casa2]
+hash[:"user"]!= "casa" 
+hash2[:casa3] = "casita"
+puts hash2 
+puts hash.size
+puts hash.has_key?(casa)
+puts hash2.has_key?(casa2)
