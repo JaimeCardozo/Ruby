@@ -107,3 +107,21 @@ puts hash2
 puts hash.size
 puts hash.has_key?(casa)
 puts hash2.has_key?(casa2)
+hash[casa] = "casota" 
+puts hash
+#Test of unshift and push
+pokemons = Array["Pikachu"]
+pokemons = pokemons.unshift("charmander")
+print pokemons
+pokemons = pokemons.unshift("piget")
+print pokemons
+puts
+puts pokemons.last()
+puts pokemons.size
+puts pokemons[pokemons.size-1]
+pokemons = ["Pikachu"]
+pokemons.push("piget")
+pokemons.push("charmander")
+print pokemons
+puts
+puts pokemons[0]
