@@ -81,7 +81,7 @@ def main()
         4 = Power Gem
         5= Exit "
         option = gets.chomp
-          case option
+        case option
           when "1"
                   puts "You will create a new user"
                   print "Digit your email: "
@@ -172,7 +172,11 @@ def main()
                 if login(administraters, key, password)
                     sw0 = true
                 while sw0
-                  puts "What do you wish? 1 = View information user, 2 = erased all users, 3 = mod_happy"
+                  puts "What do you wish? 
+                  1 = View information some user 
+                  2 = erased all users
+                  3 = mod_happy
+                  4 =  review all users"
                   opt = gets.chomp
                   case opt
                   when "1"
@@ -181,7 +185,7 @@ def main()
                         if users.has_key?(key)
                             sw2 = true
                             while sw2 
-                            print "What wish with this user: 
+                            puts "What wish with this user: 
                             1 = View user, 
                             2 = erased user, 
                             3 = update user, 
@@ -215,7 +219,7 @@ def main()
                         else
                             puts "This email not exist"
                         end
-                    when "2"
+                  when "2"
                         "erased all users"
                         puts "are you sure of erased all users? Write YES"
                         accept = gets.chomp.upcase
@@ -229,11 +233,16 @@ def main()
                         else
                           print "Incorrect respon"
                         end
-                    when "3"
+                  when "3"
                         sw0 = false
-                    else
+                  when "4"
+                    users.each do |user|
+                    puts user 
+                    end
+                  else
                         puts "this option is not valid"
 
+                  
                   end
                 end
 
