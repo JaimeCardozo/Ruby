@@ -130,6 +130,13 @@ def main()
                         user[:games]= user[:games].push(game)
                        when "4"
                         "Erased user"
+                        puts "are you sure of erased you account? Write YES"
+                                  accept = gets.chomp.upcase
+                                  if accept == "YES"
+                                    puts "The user #{users.delete(key)} was delete"
+                                  else
+                                    print "Incorrect respon"
+                                  end
                        when "5"
                         "Login_Exit"
                         login = false 
@@ -186,6 +193,13 @@ def main()
                                   print users[key]
                                 when "2"
                                     "erased user"
+                                  puts "are you sure of this? Write YES"
+                                  accept = gets.chomp.upcase
+                                  if accept == "YES"
+                                    puts "The user #{users.delete(key)} was delete"
+                                  else
+                                    print "Incorrect respon"
+                                  end
                                 when "3"
                                    puts "You only change: user_name, password, favorite_game "
                                    puts "Digit option: 1 = user_name, 2 = password, 3 = favorite_game"
@@ -203,6 +217,18 @@ def main()
                         end
                     when "2"
                         "erased all users"
+                        puts "are you sure of erased all users? Write YES"
+                        accept = gets.chomp.upcase
+                        if accept == "YES"
+                          print "Write you password of administrater: "
+                          password = gets.chomp
+                          if login(administraters, key, password)
+                            users = {}
+                            puts "All users was erase" 
+                          end
+                        else
+                          print "Incorrect respon"
+                        end
                     when "3"
                         sw0 = false
                     else
