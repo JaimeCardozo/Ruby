@@ -1,5 +1,11 @@
 def main 
     puts "Welcome a your calculator"
+    if !File.exists?("operations.txt")
+       operations = File.new("operations.txt","w+")
+    else
+       operations = File.open("operations.txt")
+    end
+    
     loop do
         puts "the operation valid are: 
         1 = Adittion
@@ -27,6 +33,8 @@ def main
         else 
             puts "Option invalid"
         end
+        puts result
+
     end
     
 end
