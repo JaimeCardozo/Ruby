@@ -54,10 +54,9 @@ def main
         when 6
             break
         when 7
-           puts "delete operations"
+           puts "Delete operations"
            operations.close
-           File.delete("operations.txt")
-           operations = File.new("operations.txt")
+           operations = File.new("operations.txt","w+")
         else 
             puts "Option invalid"
         end
