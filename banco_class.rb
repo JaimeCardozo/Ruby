@@ -29,6 +29,7 @@ def login(user, name_user, password)
   end
 end
 def main()
+users = {}
 jaime = User.new("kike", "123", 0)
 puts jaime 
 puts "#{jaime.get_name}, #{jaime.get_password} , #{jaime.get_salary}"
