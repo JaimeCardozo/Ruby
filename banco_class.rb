@@ -39,6 +39,8 @@ class User
   def take_salary(minus_cash)
     if minus_cash <= @salary
       @salary = @salary - minus_cash
+      puts "You take #{minus_cash} of account, 
+           in this moment your account have: #{@salary}"
     else
       puts "You salary is lower that #{minus_cash}"
     end 
@@ -72,14 +74,20 @@ def user_menu(user)
       print "Digit the amount of cash: "
       cash = gets.chomp.to_i
       user.take_salary(cash)
-      puts "You take #{cash} of account, in this moment your account have: #{user.get_salary}"
     when "3"
       puts "Change: name, password"
       print "Which noun you wish change? 1 = name, 2 = password"
       opt = gets.chomp
       user.change_atributte(opt) 
     when "4"
-      "work: Solve operation"
+      puts "Work: Solve operation"
+      puts "Remenber, for every operations correct you earn 100 kekis"
+      number_operations = solve_operations()
+      puts "The user hit #{number_operations} of operations"
+      salary = number_operations * 100
+      puts "You earn #{salary} kekis"
+      user.give_salary(salary)
+      puts "Your salary now is: #{user.get_salary}"
     when "5"
       "sent money other users" 
       puts "your name is: #{user.get_name()}"  
@@ -117,6 +125,61 @@ def login(users, id, password)
       return false
     end
   end
+end
+
+def solve_operations 
+  puts "This programam solve mathamatics problems"
+  count = 0
+  loop do
+      num1 = Random.rand(11)
+      num2 = Random.rand(11)
+      rando = Random.rand(5) + 1
+      print "The operation is: "
+      case rando
+      when 1
+          print "#{num1} + #{num2} = "
+          result = num1 + num2
+      when 2
+          print "#{num1} - #{num2} = "
+          result = num1 - num2
+      when 3
+          print "#{num1} * #{num2} = "
+          result = num1 * num2
+      when 4
+          if num2 == 0
+              puts "operation invalid: divided by 0"
+                  num2 = Random.rand(1..11)
+          end
+          print "#{num1} / #{num2} = "
+          result = num1 / num2
+      when 5
+          if num2 == 0
+              puts "operation invalid: divided by 0"
+                  num2 = Random.rand(1..11)
+          end
+          print "#{num1} % #{num2} = "
+          result = num1 % num2
+      end
+      puts "What is of result? "
+      user_result = gets.chomp.to_i
+      if user_result == result
+          puts "You are great! This is correct"
+          count += 1
+      else
+          puts "Sorry, keep trying"
+      end
+      puts "The result is #{result}"
+      puts "-"*80
+      puts "you Whish continue? 
+      1 = Yes
+      2 = Not"
+      opt = gets.chomp
+      if opt == "2"
+        break
+      end
+      puts "-"*80
+  end
+  return count
 end
 
 def main()
