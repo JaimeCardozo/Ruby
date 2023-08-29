@@ -33,9 +33,11 @@ class User
   def get_salary()
     @salary
   end
+
   def give_salary(new_cash)
     @salary = new_cash + @salary
   end
+
   def take_salary(minus_cash)
     if minus_cash <= @salary
       @salary = @salary - minus_cash
@@ -45,9 +47,11 @@ class User
       puts "You salary is lower that #{minus_cash}"
     end 
   end
+
   def get_id()
     @id
   end
+
 end
 
 def user_menu(user)
@@ -216,7 +220,6 @@ loop do
     puts "This option no exits" 
   end
 end
-
 end
 
 main()
